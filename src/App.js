@@ -20,7 +20,7 @@ function App() {
   const handleAnswer = (answer) => {
     const currentQuestion = questions[currentQuestionIndex];
     if (answer === currentQuestion.correctAnswer) {
-      setResultMessage(`Congratulations ${playerName}!`);
+      setResultMessage(`Congratulations...!`);
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
       setResultMessage('Wrong answer. Try again!');
@@ -33,7 +33,7 @@ function App() {
         <PlayerEntry onSubmit={handlePlayerEntry} />
       ) : currentQuestionIndex < questions.length ? (
         <>
-          <QRCodeGenerator url="https://your-game-url.com" />
+          <QRCodeGenerator url="https://http://localhost:3000" />
           <QuestionDisplay
             question={questions[currentQuestionIndex]}
             onAnswer={handleAnswer}

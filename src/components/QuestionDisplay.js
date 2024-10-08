@@ -12,7 +12,7 @@ const QuestionDisplay = ({ question, onAnswer }) => {
   return (
     <div>
       <h2>{question.question}</h2>
-      <ul>
+      <ol >
         {question.options.map((option, index) => (
           <li key={index}>
             <label>
@@ -26,7 +26,7 @@ const QuestionDisplay = ({ question, onAnswer }) => {
             </label>
           </li>
         ))}
-      </ul>
+      </ol>
       <button onClick={handleSubmit}>Submit Answer</button>
     </div>
   );
